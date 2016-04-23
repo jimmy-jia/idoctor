@@ -1,0 +1,201 @@
+*
+    box-sizing: border-box
+    padding: 0
+    margin: 0
+
+a
+    text-decoration: none
+
+html, body, .wrapper
+    max-width: 100%
+    overflow-x: none
+    height: 100%
+
+header
+    width: 100%
+    background-color: #e1e1e1
+    height: 60px
+    box-shadow: 1px 1px 10px rgba(black, .5)
+    .header-logo-div
+        margin: 0 auto
+        display: block
+        padding-top: 5px
+        width: 150px
+        img
+            display: inline-block
+            vertical-align: bottom
+        p
+            font-size: 1.4em
+            font-family: 'Montserrat'
+            display: inline-block
+            padding-left: 10px
+            padding-bottom: 4px
+#mainmenu
+    position: fixed
+    right: -300px
+    top: 60px
+    transition: all .4s
+    border: 1px solid rgba(black, .5)
+    height: calc(100% - 60px)
+    background-color: #f5f5f5
+    a
+        font-family: 'Open Sans', sans-serif
+        font-weight: 300
+        color: black
+        display: block
+        padding: 15px
+        font-size: 1.2em
+        background-color: #f1f1f1
+        border: 1px solid rgba(black, .5)
+        transition: all .4s
+        &:last-of-type
+            border-bottom: 2px solid rgba(black, .5)
+        img
+            vertical-align: middle
+            padding-right: 10px
+        &:hover
+            background-color: #ccc
+#mainmenu.menuslider
+    right: 0px
+
+#menubutton
+    position: fixed
+    right: 8px
+    top: 8px
+    color: white
+    z-index: 10
+    width: 44px
+    height: 44px
+    background-size: cover
+    //background-color: #ff00ff
+    transition: background-color .4s
+    &:hover
+        cursor: pointer
+        //background-color: #cc00cc
+
+#svg_3, #svg_4, #svg_5
+    transition: all .5s
+    transform-origin: 50% 50%
+.svg3
+    transform: rotate3d(0, 0, 1, -45deg)
+.svg4
+    transform: translate(0, 3px) rotate3d(0, 0, 1, 45deg)
+.svg5
+    transform: translate(0, -3px) rotate3d(0, 0, 1, -45deg)
+
+
+
+.loginpage
+    text-align: center
+    hr
+        width: 70%
+        margin: 50px auto
+
+    form, fieldset
+        border: 0
+    fieldset
+        p
+            padding-bottom: 10px
+            font-family: 'Source Sans Pro', sans-serif
+    h1
+        font-family: 'Montserrat', sans-serif
+        font-weight: normal
+        border: 0
+        padding-bottom: 50px
+        padding-top: 60px
+        img
+            padding-right: 10px
+            vertical-align: middle
+    button
+        width: 80px
+        height: 80px
+        border-radius: 10px
+        transition: all .4s
+        font-size: 1.5em
+        font-family: 'Open Sans', sans-serif
+        font-weight: bold
+        border: 0
+        box-shadow: 1px 1px 1px rgba(black, .5)
+    .login-fb
+        font-size: 2em
+        background-color: #ccc
+        &:hover
+            background-color: #999
+    .login-google
+        font-size: 2em
+        background-color: #ccc
+        &:hover
+            background-color: #999
+    .login-doctor
+        font-weight: 300
+        width: 200px
+        background-color: #aaa
+        &:hover
+            background-color: #777
+    .login-welcome
+        p
+            font-size: 1.4em
+            margin-bottom: 30px
+        a
+            font-size: 1.5em
+        button
+            font-size: 1.4em
+            font-weight: 300
+            width: 110px
+            margin: 0
+            height: 50px
+            margin-top: 30px
+
+.homepage
+    p
+        font-family: 'Montserrat', sans-serif
+        font-size: 1.7em
+        text-align: center
+        padding-top: 40px
+        padding-bottom: 24px
+    .home-justify
+        display: flex
+        flex-wrap: wrap
+        justify-content: center
+        a
+            width: 90px
+            height: 90px
+            background-color: #bbb
+            color: white
+            vertical-align: middle
+            text-align: center
+            padding-top: 32px
+            margin: 5px
+            transition: all .4s
+            &:nth-child(3)
+                padding-top: 22px
+            &:hover
+                background-color: #888
+
+.nursepage
+    display: flex
+    justify-content: center
+    align-items: center
+    height: 100%
+    .nurse-center-button
+        padding: 10px
+        border: 0
+        background-color: #bbb
+        font-size: 1.6em
+        font-family: 'Open Sans', sans-serif
+        font-weight: 300
+        margin-top: 60%
+    .nurse-called
+        font-size: 1.4em
+        margin: 0 auto
+        margin-top: 40%
+        font-family: 'Open Sans', sans-serif
+        width: 80%
+        button
+            border: 0
+            background-color: #bbb
+            font-family: 'Open Sans',sans-serif
+            font-weight: 300
+            padding: 10px
+            font-size: 1.4em
+            margin-top: 8px

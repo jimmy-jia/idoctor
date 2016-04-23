@@ -1,0 +1,79 @@
+<!doctype html>
+<html ng-app="appMain">
+<head>
+	<meta charset="utf-8">
+	<title>iDoctor</title>
+	<base href="/">
+	<meta name="description" content="iDoctor, awesome description here">
+	<meta name="keywords" content="idoctor keywords etc etc blah blah">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+	<link href="stylesheet.css" rel="stylesheet" type="text/css">
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,300,400|Open+Sans+Condensed:300|Lato|Montserrat|Source+Sans+Pro:400,700italic|Varela|Poiret One' rel='stylesheet' type='text/css'>
+	<link rel="icon" href="favicon.ico">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular-route.min.js"></script>
+	<script src="https://cdn.firebase.com/js/client/2.2.4/firebase.js"></script>
+	<script src="https://cdn.firebase.com/libs/angularfire/1.2.0/angularfire.min.js"></script>	
+	<script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>	
+<script src="app.js"></script>
+</head>
+<body>
+	<div class="wrapper">
+		<header ng-show="uid">
+			<div class="header-logo-div">
+				<img src="http://placehold.it/50x50" alt="iDoctor Logo"/><p>iDoctor</p>
+			</div>
+			<span id="menubutton" onclick="menu()" ng-show="uid">
+				<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 16 16" enable-background="new 0 0 16 16" xml:space="preserve">
+						<g>
+							<path id="svg_3" fill="black" d="m4.04949,8.47441l8,0c0.275,0 0.5,-0.225 0.5,-0.5c0,-0.276 -0.225,-0.5 -0.5,-0.5l-8,0c-0.276,0 -0.5,0.224 -0.5,0.5c0,0.275 0.224,0.5 0.5,0.5z"/>
+							<path id="svg_4" fill="black" d="m4.04949,5.47441l8,0c0.275,0 0.5,-0.224 0.5,-0.5s-0.225,-0.5 -0.5,-0.5l-8,0c-0.276,0 -0.5,0.224 -0.5,0.5s0.224,0.5 0.5,0.5z"/>
+							<path id="svg_5" fill="black" d="m4.04949,11.47441l8,0c0.275,0 0.5,-0.225 0.5,-0.5s-0.225,-0.5 -0.5,-0.5l-8,0c-0.276,0 -0.5,0.225 -0.5,0.5s0.224,0.5 0.5,0.5z"/>
+						</g>
+					</svg>
+			</span>
+		</header>
+		<nav id="mainmenu" ng-show="uid">
+				<a href="home" onclick="menu()"><img src="http://placehold.it/50x50" alt="home"/>{{name}}</a>
+				<a href="call-a-nurse" onclick="menu()"><img src="http://placehold.it/50x50" alt="call-a-nurse"/>Call a Nurse</a>
+				<a href="details" onclick="menu()"><img src="http://placehold.it/50x50" alt="details"/>Details</a>
+				<a href="settings" onclick="menu()"><img src="http://placehold.it/50x50" alt="settings"/>Settings</a>
+				<a href="/" ng-click="logout()" onclick="menu()"><img src="http://placehold.it/50x50" alt="logout"/>Logout</a>
+			</nav>
+	<div id="main">
+		<div ng-view>
+		</div>
+	</div>
+
+	</div>
+	<script>
+		function menu(){
+			var menu = document.getElementById("mainmenu");
+			menu.classList.toggle("menuslider");
+
+			for(var i=3; i<6; i++){
+				if(!$('#svg_'+i).attr('class'))
+					$('#svg_'+i).attr('class', 'svg'+i);
+				else
+					$('#svg_'+i).removeAttr('class');
+			}
+		}
+		window.fbAsyncInit = function() {
+			FB.init({
+				appId			: '253633418318976',
+				xfbml			: true,
+				version		: 'v2.6'
+			});
+		};
+		(function(d, s, id){
+			 var js, fjs = d.getElementsByTagName(s)[0];
+			 if (d.getElementById(id)) {return;}
+			 js = d.createElement(s); js.id = id;
+			 js.src = "//connect.facebook.net/en_US/sdk.js";
+			 fjs.parentNode.insertBefore(js, fjs);
+		 }(document, 'script', 'facebook-jssdk'));
+	</script>
+</body>
+</html>

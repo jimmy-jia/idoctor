@@ -1,0 +1,21 @@
+<div class="loginpage">
+  <h1><img src="http://placehold.it/100x100" alt="iDoctor logo"/>iDoctor</h1>
+  <form id="auth">
+    <fieldset ng-hide="user">
+      <p>Sign in as a Patient</p>
+      <button class="login-fb" type="submit" ng-click="signInFB()">f</button>
+      <button class="login-google" n type="submit" ng-click="signInGoogle()">g</button>
+
+      <hr>
+
+      <button class="login-doctor" type="submit" ng-click="signInDoctor">Sign in as a <b>Doctor</b></button>
+    </fieldset>
+
+    <span class="login-welcome" ng-show="user">
+      <p>Welcome to iDoctor</p>
+      <a href="home" class="login-dashboard">Go to dashboard</a><br>
+      <button class="login-logout" type="submit" ng-click="logout()">Log Out</button>
+    </span>
+    
+  </form>
+</div>  

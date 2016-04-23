@@ -1,0 +1,200 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0; }
+
+a {
+  text-decoration: none; }
+
+html, body, .wrapper {
+  max-width: 100%;
+  overflow-x: none;
+  height: 100%; }
+
+header {
+  width: 100%;
+  background-color: #e1e1e1;
+  height: 60px;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5); }
+  header .header-logo-div {
+    margin: 0 auto;
+    display: block;
+    padding-top: 5px;
+    width: 150px; }
+    header .header-logo-div img {
+      display: inline-block;
+      vertical-align: bottom; }
+    header .header-logo-div p {
+      font-size: 1.4em;
+      font-family: "Montserrat";
+      display: inline-block;
+      padding-left: 10px;
+      padding-bottom: 4px; }
+
+#mainmenu {
+  position: fixed;
+  right: -300px;
+  top: 60px;
+  transition: all 0.4s;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  height: calc(100% - 60px);
+  background-color: #f5f5f5; }
+  #mainmenu a {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 300;
+    color: black;
+    display: block;
+    padding: 15px;
+    font-size: 1.2em;
+    background-color: #f1f1f1;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    transition: all 0.4s; }
+    #mainmenu a:last-of-type {
+      border-bottom: 2px solid rgba(0, 0, 0, 0.5); }
+    #mainmenu a img {
+      vertical-align: middle;
+      padding-right: 10px; }
+    #mainmenu a:hover {
+      background-color: #ccc; }
+
+#mainmenu.menuslider {
+  right: 0px; }
+
+#menubutton {
+  position: fixed;
+  right: 8px;
+  top: 8px;
+  color: white;
+  z-index: 10;
+  width: 44px;
+  height: 44px;
+  background-size: cover;
+  transition: background-color 0.4s; }
+  #menubutton:hover {
+    cursor: pointer; }
+
+#svg_3, #svg_4, #svg_5 {
+  transition: all 0.5s;
+  transform-origin: 50% 50%; }
+
+.svg3 {
+  transform: rotate3d(0, 0, 1, -45deg); }
+
+.svg4 {
+  transform: translate(0, 3px) rotate3d(0, 0, 1, 45deg); }
+
+.svg5 {
+  transform: translate(0, -3px) rotate3d(0, 0, 1, -45deg); }
+
+.loginpage {
+  text-align: center; }
+  .loginpage hr {
+    width: 70%;
+    margin: 50px auto; }
+  .loginpage form, .loginpage fieldset {
+    border: 0; }
+  .loginpage fieldset p {
+    padding-bottom: 10px;
+    font-family: "Source Sans Pro", sans-serif; }
+  .loginpage h1 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: normal;
+    border: 0;
+    padding-bottom: 50px;
+    padding-top: 60px; }
+    .loginpage h1 img {
+      padding-right: 10px;
+      vertical-align: middle; }
+  .loginpage button {
+    width: 80px;
+    height: 80px;
+    border-radius: 10px;
+    transition: all 0.4s;
+    font-size: 1.5em;
+    font-family: "Open Sans", sans-serif;
+    font-weight: bold;
+    border: 0;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5); }
+  .loginpage .login-fb {
+    font-size: 2em;
+    background-color: #ccc; }
+    .loginpage .login-fb:hover {
+      background-color: #999; }
+  .loginpage .login-google {
+    font-size: 2em;
+    background-color: #ccc; }
+    .loginpage .login-google:hover {
+      background-color: #999; }
+  .loginpage .login-doctor {
+    font-weight: 300;
+    width: 200px;
+    background-color: #aaa; }
+    .loginpage .login-doctor:hover {
+      background-color: #777; }
+  .loginpage .login-welcome p {
+    font-size: 1.4em;
+    margin-bottom: 30px; }
+  .loginpage .login-welcome a {
+    font-size: 1.5em; }
+  .loginpage .login-welcome button {
+    font-size: 1.4em;
+    font-weight: 300;
+    width: 110px;
+    margin: 0;
+    height: 50px;
+    margin-top: 30px; }
+
+.homepage p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.7em;
+  text-align: center;
+  padding-top: 40px;
+  padding-bottom: 24px; }
+.homepage .home-justify {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; }
+  .homepage .home-justify a {
+    width: 90px;
+    height: 90px;
+    background-color: #bbb;
+    color: white;
+    vertical-align: middle;
+    text-align: center;
+    padding-top: 32px;
+    margin: 5px;
+    transition: all 0.4s; }
+    .homepage .home-justify a:nth-child(3) {
+      padding-top: 22px; }
+    .homepage .home-justify a:hover {
+      background-color: #888; }
+
+.nursepage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%; }
+  .nursepage .nurse-center-button {
+    padding: 10px;
+    border: 0;
+    background-color: #bbb;
+    font-size: 1.6em;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 300;
+    margin-top: 60%; }
+  .nursepage .nurse-called {
+    font-size: 1.4em;
+    margin: 0 auto;
+    margin-top: 40%;
+    font-family: "Open Sans", sans-serif;
+    width: 80%; }
+    .nursepage .nurse-called button {
+      border: 0;
+      background-color: #bbb;
+      font-family: "Open Sans", sans-serif;
+      font-weight: 300;
+      padding: 10px;
+      font-size: 1.4em;
+      margin-top: 8px; }
+
+/*# sourceMappingURL=stylesheet.css.map */
