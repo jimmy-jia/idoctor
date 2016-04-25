@@ -6,6 +6,12 @@
 a
     text-decoration: none
 
+p
+    font-family: 'Lato', sans-serif
+a
+    font-family: 'Varela', sans-serif
+    color: #DF5555
+
 html, body, .wrapper
     max-width: 100%
     overflow-x: none
@@ -170,7 +176,7 @@ header
             &:nth-child(3)
                 padding-top: 22px
             &:hover
-                background-color: #888
+                background-color: #DF5555
 
 .nursepage
     display: flex
@@ -199,3 +205,95 @@ header
             padding: 10px
             font-size: 1.4em
             margin-top: 8px
+
+.surveypage
+    .survey-progressbar
+        padding-top: 15px
+        img
+            max-width: 100%
+    .survey-responsearea
+        h1
+            margin-top: 15px
+            font-family: 'Montserrat', sans-serif
+            font-weight: normal
+            font-size: 2.4em
+            padding: 15px
+        .survey-feeling
+            margin-top: 20px
+            display: flex
+            justify-content: center
+            img
+                width: 20%
+                height: 20%
+        .survey-pain
+            margin-top: 20px
+            display: flex
+            justify-content: space-between
+            padding: 5px 0
+            img
+                width: 100px//26%
+                height: 100px//26%
+                padding: 8px
+    .survey-message
+        text-align: center
+        padding: 10px
+        border: 2px dashed #DF5555
+        border-radius: 10px
+        margin: 10px auto
+        margin-top: 50px
+        width: 50%
+        font-family: 'Open Sans', sans-serif
+        font-weight: 300
+        font-size: 1.4em
+
+    .survey-nav
+        display: flex
+        justify-content: center
+    .survey-next, .survey-back, .survey-submit
+        background-color: transparent
+        background-image: url(resources/front.png)
+        background-position: center
+        background-size: cover
+        border: 0
+        width: 150px
+        height: 150px
+        &:active, &:focus
+            outline: 0
+            border: 0
+    .survey-back
+        background-image: url(resources/back.png)
+    .survey-submit
+        background-image: none
+        background-color: #262626
+        width: 80px
+        height: 80px
+        margin-top: 35px
+        margin-right: 35px
+        border-radius: 25%
+        color: white
+        font-family: 'Montserrat', sans-serif
+    input[type=range]
+        display: block
+        margin: 0 auto
+    form
+        input, textarea
+            display: block
+            margin: 0 auto
+            max-width: 90%
+            &:active, &:focus
+                outline: 0
+                border: 1px solid #DF5555
+        input[type=submit]
+            margin-top: 15px
+            font-family: 'Montserrat', sans-serif
+            font-size: 1.5em
+            padding: 15px
+            background-color: #DF5555
+            border: 0
+            border-radius: 5%
+            color: white
+        textarea
+            line-height: 1.4
+            padding: 8px
+            border-radius: 5px
+            font-family: 'Open Sans', sans-serif

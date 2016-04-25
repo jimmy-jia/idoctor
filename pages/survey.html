@@ -1,0 +1,57 @@
+<div class="surveypage">
+	<div class="survey-progressbar">
+		<img src="resources/progress1.png" alt="survey progress"/>
+	</div>
+	<div class="survey-responsearea">
+		<div ng-show="p1">
+			<h1>How are you feeling?</h1>
+			<div id="fp" class="survey-feeling">
+				<img src="resources/1.png" id="f1" ng-click="feeling(1)" alt="great"/>
+				<img src="resources/2.png" id="f2" ng-click="feeling(2)" alt="good"/>
+				<img src="resources/3.png" id="f3" ng-click="feeling(3)" alt="ok"/>
+				<img src="resources/4.png" id="f4" ng-click="feeling(4)" alt="bad"/>
+				<img src="resources/5.png" id="f5" ng-click="feeling(5)" alt="awful"/>
+			</div>
+			<p class="survey-message">{{message1}}</p>
+			<div class="survey-nav">
+				<button class="survey-next" ng-click="show(2)" ng-show="p1d"></button>
+			</div>
+		</div>
+		<div ng-show="p2">
+			<h1>Any areas of major pain?</h1>
+			<div id="fp" class="survey-pain">
+				<img src="resources/head.png" id="p1" ng-click="pain(1)" alt="head"/>
+				<img src="resources/chest.jpg" id="p2" ng-click="pain(2)" alt="chest"/>
+				<img src="resources/leg.png" id="p3" ng-click="pain(3)" alt="leg"/>
+			</div>
+			<p class="survey-message">{{message2}}</p>
+			<div class="survey-nav">
+				<button class="survey-back" ng-click="show(1)" ng-show="p1d"></button>
+				<button class="survey-next" ng-click="show(3)" ng-show="p1d"></button>
+			</div>
+		</div>
+		<div ng-show="p3">
+			<h1>Level of pain?</h1>
+			<input type="range" min="0" max="100" value="0" id="lop" ng-click="level()"></input>
+			<p class="survey-message">{{message3}}</p>
+			<div class="survey-nav">
+				<button class="survey-back" ng-click="show(2)" ng-show="p1d"></button>
+				<button class="survey-submit" ng-click="show(4)" ng-show="p1d">submit</button>
+			</div>
+		</div>
+		<div ng-show="p4">
+			<h1>Survey Complete!<br>Thank you!</h1>
+			<form action="https://formspree.io/jimmy.j.jia@gmail.com" method="POST">
+				<input type="hidden" name="name" value="{{name}}">
+				<textarea name="message" id="" cols="35" rows="10" placeholder="Optional message to the doctor"></textarea>
+				<input type="submit" value="Send">
+				<input type="hidden" name="_next" value="/idoctor/" />
+			</form>
+			<!--<div class="survey-nav">
+				<button class="survey-submit" ng-click="show(3)" ng-show="p1d">done</button>
+				
+			</div>-->
+		</div>
+	</div>
+
+</div>

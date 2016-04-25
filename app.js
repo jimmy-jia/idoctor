@@ -24,6 +24,10 @@ app.config(function($routeProvider, $locationProvider){
 		.when('/call-a-nurse', {
 			templateUrl: 'pages/nurse.html',
 			controller: 'NurseController'
+		})
+		.when('/survey', {
+			templateUrl: 'pages/survey.html',
+			controller: 'SurveyController'
 		});
 		$locationProvider.html5Mode(true);
 });
@@ -118,4 +122,105 @@ app.controller('NurseController', function($scope, $rootScope){
 		console.log("call cancelled");
 		$scope.nurse = false;
 	}
+});
+
+app.controller('SurveyController', function($scope, $rootScope){
+	$scope.p1 = true;
+	$scope.p2 = false;
+	$scope.p3 = false;
+	$scope.p4 = false;
+	$scope.message1 = "I feel...";
+	$scope.message2 = "No pain";
+	$scope.message3 = "No pain";
+	$scope.p1d = false;
+	$scope.feeling = function(i){
+		switch(i){
+			case 1:
+				$scope.message1 = "I feel great!";
+				break;
+			case 2:
+				$scope.message1 = "I feel good";
+				break;
+			case 3:
+				$scope.message1 = "I feel ok";
+				break;
+			case 4:
+				$scope.message1 = "I feel bad";
+				break;
+			case 5:
+				$scope.message1 = "I feel awful";
+				break;
+		}
+		for(var j = 1; j < 6; j++){
+			var clicked = document.getElementById("f"+j);
+			clicked.style.backgroundColor = "transparent";
+		}
+		var clicked = document.getElementById("f"+i);
+		clicked.style.backgroundColor = "#DF5555";
+		$scope.p1d = true;
+	}
+	$scope.pain = function(i){
+		switch(i){
+			case 1:
+				$scope.message2 = "Head!";
+				break;
+			case 2:
+				$scope.message2 = "Upper Body!";
+				break;
+			case 3:
+				$scope.message2 = "Arms or Legs!";
+				break;
+		}
+		for(var j = 1; j < 4; j++){
+			var clicked = document.getElementById("p"+j);
+			clicked.style.backgroundColor = "transparent";
+		}
+		var clicked = document.getElementById("p"+i);
+		clicked.style.backgroundColor = "#DF5555";
+	}
+	$scope.level = function(){
+		var range = document.getElementById("lop");
+		$scope.painrange = range.value;
+		if($scope.painrange < 25)
+			$scope.message3 = "Bearable";
+		else if($scope.painrange < 50)
+			$scope.message3 = "Moderate";
+		else if($scope.painrange < 75)
+			$scope.message3 = "Severe";
+		else if($scope.painrange < 101)
+			$scope.message3 = "Unbearable";
+	}
+	$scope.show = function(i){
+		$scope.p1 = false;
+		$scope.p2 = false;
+		$scope.p3 = false;
+		$scope.p4 = false;
+		$scope.p5 = false;
+		switch(i){
+			case 1:
+				$scope.p1 = true;
+				break;
+			case 2:
+				$scope.p2 = true;
+				break;
+			case 3:
+				$scope.p3 = true;
+				break;
+			case 4:
+				$scope.p4 = true;
+				break;
+			case 5:
+				$scope.p5 = true;
+				break
+		}
+	}
+});
+
+
+app.controller('DetailsController', function($scope, $rootScope){
+
+});
+
+app.controller('SettingsController', function($scope, $rootScope){
+
 });

@@ -6,6 +6,13 @@
 a {
   text-decoration: none; }
 
+p {
+  font-family: "Lato", sans-serif; }
+
+a {
+  font-family: "Varela", sans-serif;
+  color: #DF5555; }
+
 html, body, .wrapper {
   max-width: 100%;
   overflow-x: none;
@@ -167,7 +174,7 @@ header {
     .homepage .home-justify a:nth-child(3) {
       padding-top: 22px; }
     .homepage .home-justify a:hover {
-      background-color: #888; }
+      background-color: #DF5555; }
 
 .nursepage {
   display: flex;
@@ -196,5 +203,93 @@ header {
       padding: 10px;
       font-size: 1.4em;
       margin-top: 8px; }
+
+.surveypage .survey-progressbar {
+  padding-top: 15px; }
+  .surveypage .survey-progressbar img {
+    max-width: 100%; }
+.surveypage .survey-responsearea h1 {
+  margin-top: 15px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: normal;
+  font-size: 2.4em;
+  padding: 15px; }
+.surveypage .survey-responsearea .survey-feeling {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center; }
+  .surveypage .survey-responsearea .survey-feeling img {
+    width: 20%;
+    height: 20%; }
+.surveypage .survey-responsearea .survey-pain {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 0; }
+  .surveypage .survey-responsearea .survey-pain img {
+    width: 100px;
+    height: 100px;
+    padding: 8px; }
+.surveypage .survey-message {
+  text-align: center;
+  padding: 10px;
+  border: 2px dashed #DF5555;
+  border-radius: 10px;
+  margin: 10px auto;
+  margin-top: 50px;
+  width: 50%;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+  font-size: 1.4em; }
+.surveypage .survey-nav {
+  display: flex;
+  justify-content: center; }
+.surveypage .survey-next, .surveypage .survey-back, .surveypage .survey-submit {
+  background-color: transparent;
+  background-image: url(resources/front.png);
+  background-position: center;
+  background-size: cover;
+  border: 0;
+  width: 150px;
+  height: 150px; }
+  .surveypage .survey-next:active, .surveypage .survey-next:focus, .surveypage .survey-back:active, .surveypage .survey-back:focus, .surveypage .survey-submit:active, .surveypage .survey-submit:focus {
+    outline: 0;
+    border: 0; }
+.surveypage .survey-back {
+  background-image: url(resources/back.png); }
+.surveypage .survey-submit {
+  background-image: none;
+  background-color: #262626;
+  width: 80px;
+  height: 80px;
+  margin-top: 35px;
+  margin-right: 35px;
+  border-radius: 25%;
+  color: white;
+  font-family: "Montserrat", sans-serif; }
+.surveypage input[type=range] {
+  display: block;
+  margin: 0 auto; }
+.surveypage form input, .surveypage form textarea {
+  display: block;
+  margin: 0 auto;
+  max-width: 90%; }
+  .surveypage form input:active, .surveypage form input:focus, .surveypage form textarea:active, .surveypage form textarea:focus {
+    outline: 0;
+    border: 1px solid #DF5555; }
+.surveypage form input[type=submit] {
+  margin-top: 15px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.5em;
+  padding: 15px;
+  background-color: #DF5555;
+  border: 0;
+  border-radius: 5%;
+  color: white; }
+.surveypage form textarea {
+  line-height: 1.4;
+  padding: 8px;
+  border-radius: 5px;
+  font-family: "Open Sans", sans-serif; }
 
 /*# sourceMappingURL=stylesheet.css.map */
