@@ -1,15 +1,21 @@
 <div class="loginpage">
   <h1><img src="resources/iDoctor.png" height="100px" alt="iDoctor logo"/>iDoctor</h1>
   <form id="auth">
-    <fieldset ng-hide="user">
+    <fieldset ng-hide="user || doctorsignup">
       <p>Sign in as a Patient</p>
       <button class="login-fb" type="submit" ng-click="signInFB()">f</button>
       <button class="login-google" n type="submit" ng-click="signInGoogle()">g</button>
 
       <hr>
 
-      <button class="login-doctor" type="submit" ng-click="signInDoctor">Sign in as a <b>Doctor</b></button>
+      <button class="login-doctor" type="submit" ng-click="signInDoctor()">Sign in as a <b>Doctor</b></button>
     </fieldset>
+    <div class="login-doctor-page" ng-show="doctorsignup">
+      <p>Welcome</p>
+      <p>Doctor</p><input type="text" placeholder=""></input><br>
+      <p>Password</p><input type="password"></input><br>
+      <button class="login-doctor-final" type="submit" ng-click="logInDoctor()">Log In</button>
+    </div>
 
     <span class="login-welcome" ng-show="user">
       <p>Welcome to iDoctor</p>

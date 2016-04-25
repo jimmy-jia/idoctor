@@ -138,6 +138,13 @@ header {
     background-color: #aaa; }
     .loginpage .login-doctor:hover {
       background-color: #777; }
+  .loginpage .login-doctor-final {
+    background-color: #DF5555;
+    width: 120px;
+    height: 60px;
+    margin-top: 10px;
+    color: white;
+    font-family: "Montserrat", sans-serif; }
   .loginpage .login-welcome p {
     font-size: 1.4em;
     margin-bottom: 30px; }
@@ -150,6 +157,30 @@ header {
     margin: 0;
     height: 50px;
     margin-top: 30px; }
+  .loginpage .login-doctor-page p:first-child {
+    font-size: 2em;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 300;
+    margin-bottom: 10px; }
+  .loginpage .login-doctor-page p:nth-child(2), .loginpage .login-doctor-page p:nth-child(5) {
+    display: inline-block;
+    clear: left;
+    padding-right: 8px;
+    font-size: 1.4em;
+    margin-bottom: 12px; }
+  .loginpage .login-doctor-page p:nth-child(5) {
+    margin-left: -26px; }
+  .loginpage .login-doctor-page input {
+    width: 160px;
+    border: 0;
+    padding: 6px;
+    padding-top: 8px;
+    background-color: #f1f1f1;
+    transition: all 0.4s;
+    font-size: 1.4em; }
+    .loginpage .login-doctor-page input:active, .loginpage .login-doctor-page input:focus {
+      outline: 0;
+      background-color: #dedede; }
 
 .homepage p {
   font-family: "Montserrat", sans-serif;
