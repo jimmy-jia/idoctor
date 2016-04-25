@@ -111,6 +111,9 @@ app.controller('AuthController', function($scope, $rootScope, Auth){
 		$scope.message = "Logged Out!"
 		$scope.user = 0;
 	}
+	$scope.signInDoctor = function(){
+		$scope.doctorsignup = true;
+	}
 });
 
 app.controller('NurseController', function($scope, $rootScope){
