@@ -36,11 +36,11 @@
 			</span>
 		</header>
 		<nav id="mainmenu" ng-show="uid">
-				<a href="home" onclick="menu()"><img src="http://placehold.it/50x50" alt="home"/>{{name}}</a>
-				<a href="call-a-nurse" onclick="menu()"><img src="http://placehold.it/50x50" alt="call-a-nurse"/>Call a Nurse</a>
-				<a href="details" onclick="menu()"><img src="http://placehold.it/50x50" alt="details"/>Details</a>
-				<a href="settings" onclick="menu()"><img src="http://placehold.it/50x50" alt="settings"/>Settings</a>
-				<a href="/" ng-click="logout()" onclick="menu()"><img src="http://placehold.it/50x50" alt="logout"/>Logout</a>
+				<a href="home" onclick="menu()"><img src="resources/account.svg" alt="home"/>{{name}}</a>
+				<a href="call-a-nurse" onclick="menu()"><img src="resources/phone.svg" alt="call-a-nurse"/>Call a Nurse</a>
+				<a href="details" onclick="menu()"><img src="resources/info.svg" alt="details"/>Details</a>
+				<a href="settings" onclick="menu()"><img src="resources/settings.svg" alt="settings"/>Settings</a>
+				<a href="/" ng-click="logout()" onclick="menu()"><img src="resources/logout.svg" alt="logout"/>Logout</a>
 			</nav>
 	<div id="main">
 		<div ng-view>

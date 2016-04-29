@@ -16,9 +16,11 @@ a {
 html, body, .wrapper {
   max-width: 100%;
   overflow-x: none;
-  height: 100%; }
+  height: 100%;
+  background-color: #fcfcfc; }
 
 header {
+  position: fixed;
   width: 100%;
   background-color: #e1e1e1;
   height: 60px;
@@ -37,6 +39,9 @@ header {
       display: inline-block;
       padding-left: 10px;
       padding-bottom: 4px; }
+
+#main {
+  padding-top: 60px; }
 
 #mainmenu {
   position: fixed;
@@ -60,7 +65,8 @@ header {
       border-bottom: 2px solid rgba(0, 0, 0, 0.5); }
     #mainmenu a img {
       vertical-align: middle;
-      padding-right: 10px; }
+      padding-right: 10px;
+      width: 50px; }
     #mainmenu a:hover {
       background-color: #ccc; }
 
@@ -193,17 +199,13 @@ header {
   flex-wrap: wrap;
   justify-content: center; }
   .homepage .home-justify a {
-    width: 90px;
-    height: 90px;
-    background-color: #bbb;
-    color: white;
-    vertical-align: middle;
+    width: 100px;
+    height: 100px;
     text-align: center;
-    padding-top: 32px;
     margin: 5px;
     transition: all 0.4s; }
-    .homepage .home-justify a:nth-child(3) {
-      padding-top: 22px; }
+    .homepage .home-justify a img {
+      height: 80px; }
     .homepage .home-justify a:hover {
       background-color: #DF5555; }
 

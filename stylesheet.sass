@@ -16,8 +16,10 @@ html, body, .wrapper
     max-width: 100%
     overflow-x: none
     height: 100%
+    background-color: #fcfcfc
 
 header
+    position: fixed
     width: 100%
     background-color: #e1e1e1
     height: 60px
@@ -36,6 +38,8 @@ header
             display: inline-block
             padding-left: 10px
             padding-bottom: 4px
+#main
+    padding-top: 60px
 #mainmenu
     position: fixed
     right: -300px
@@ -59,6 +63,7 @@ header
         img
             vertical-align: middle
             padding-right: 10px
+            width: 50px
         &:hover
             background-color: #ccc
 #mainmenu.menuslider
@@ -196,17 +201,19 @@ header
         flex-wrap: wrap
         justify-content: center
         a
-            width: 90px
-            height: 90px
-            background-color: #bbb
-            color: white
-            vertical-align: middle
+            width: 100px
+            height: 100px
+            //background-color: #bbb
+            //color: white
+            //vertical-align: middle
             text-align: center
-            padding-top: 32px
             margin: 5px
+            //padding-top: 32px
             transition: all .4s
+            img
+                height: 80px
             &:nth-child(3)
-                padding-top: 22px
+                //padding-top: 22px
             &:hover
                 background-color: #DF5555
     
