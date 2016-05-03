@@ -333,6 +333,13 @@ header {
   #calendar h2 {
     padding-left: 15px; }
 
+#appointments {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+  text-align: center;
+  padding-top: 20px;
+  font-size: 1.2em; }
+
 .settingspage {
   padding-top: 30px; }
   .settingspage p {
