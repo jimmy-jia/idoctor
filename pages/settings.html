@@ -1,0 +1,15 @@
+<div class="settingspage">
+	<form ng-submit="saveSettings()" class="ng-pristine ng-valid">
+		
+		<p>Notifications</p>
+		<input id="setting-menuposition" type="checkbox" ng-model="settings.menuleft"/>
+		<label for="setting-menuposition"></label>
+
+		<p>Emergency Contact Info</p>
+		<input ng-model="settings.contactname" placeholder="Name"/>
+		<input ng-model="settings.contactnum" placeholder="Number"/>
+
+		
+		<button type="submit">Save Settings</button>
+	</form>
+</div>

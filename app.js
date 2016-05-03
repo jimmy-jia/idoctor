@@ -13,6 +13,10 @@ app.config(function($routeProvider, $locationProvider){
 		.when('/home', {
 			templateUrl: 'pages/home.html'
 		})
+		.when('/calendar', {
+			templateUrl: 'pages/calendar.html',
+			controller: 'CalendarController'
+		})
 		.when('/details', {
 			templateUrl: 'pages/details.html',
 			controller: 'DetailsController'
@@ -35,6 +39,7 @@ app.config(function($routeProvider, $locationProvider){
 app.run(function($rootScope, Auth){
 	Auth.$onAuth(function(authData){
 		try{
+			$rootScope.menuleft = false;
 			$rootScope.uid = authData.uid;
 			$scope.user = authData.uid;
 			if(authData.facebook)
@@ -224,6 +229,25 @@ app.controller('DetailsController', function($scope, $rootScope){
 
 });
 
-app.controller('SettingsController', function($scope, $rootScope){
+app.controller('SettingsController', function($scope, $rootScope, $firebaseObject, $firebaseArray){
+	var ref = new Firebase('https://walletrak.firebaseio.com/');
+    var userRef = ref.child($rootScope.uid);
+    var userObject = $firebaseObject(userRef);
+    var settingsRef = userRef.child('settings');
+    $scope.settings = $firebaseObject(settingsRef);
+ 
+    $scope.saveSettings = function(){
+        $scope.settings.$save();
+        alert("Settings Saved!");
+    }
+});
+
+app.controller('CalendarController', function($scope, $rootScope){
+	$('#calendar').fullCalendar({
+		dayClick: function() {
+        	alert('Sorry! We are full that day');
+    	},
+    	height: "auto"
+	});
 
 });

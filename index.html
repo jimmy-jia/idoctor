@@ -11,13 +11,18 @@
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,300,400|Open+Sans+Condensed:300|Lato|Montserrat|Source+Sans+Pro:400,700italic|Varela|Poiret One' rel='stylesheet' type='text/css'>
 	<link rel="icon" href="favicon.ico">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
-
+	<meta name="mobile-web-app-capable" content="yes">
+	<link rel="manifest" href="manifest.json">
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular-route.min.js"></script>
 	<script src="https://cdn.firebase.com/js/client/2.2.4/firebase.js"></script>
 	<script src="https://cdn.firebase.com/libs/angularfire/1.2.0/angularfire.min.js"></script>	
 	<script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>	
-<script src="app.js"></script>
+	<script src="http://momentjs.com/downloads/moment.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.7.1/fullcalendar.min.js"></script>
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.7.1/fullcalendar.min.css">
+
+	<script src="app.js"></script>
 </head>
 <body>
 	<div class="wrapper">
@@ -25,7 +30,7 @@
 			<div class="header-logo-div">
 				<img src="resources/iDoctor.png" height="50px" alt="iDoctor Logo"/><p>iDoctor</p>
 			</div>
-			<span id="menubutton" onclick="menu()" ng-show="uid">
+			<span id="menubutton" onclick="menu()" ng-show="uid" ng-class="{buttonleft: menuleft}">
 				<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 16 16" enable-background="new 0 0 16 16" xml:space="preserve">
 						<g>
 							<path id="svg_3" fill="black" d="m4.04949,8.47441l8,0c0.275,0 0.5,-0.225 0.5,-0.5c0,-0.276 -0.225,-0.5 -0.5,-0.5l-8,0c-0.276,0 -0.5,0.224 -0.5,0.5c0,0.275 0.224,0.5 0.5,0.5z"/>
@@ -35,7 +40,7 @@
 					</svg>
 			</span>
 		</header>
-		<nav id="mainmenu" ng-show="uid">
+		<nav id="mainmenu" ng-show="uid" ng-class="{menuleft: menuleft}">
 				<a href="home" onclick="menu()"><img src="resources/account.svg" alt="home"/>{{name}}</a>
 				<a href="call-a-nurse" onclick="menu()"><img src="resources/phone.svg" alt="call-a-nurse"/>Call a Nurse</a>
 				<a href="details" onclick="menu()"><img src="resources/info.svg" alt="details"/>Details</a>
@@ -64,7 +69,7 @@
 			FB.init({
 				appId			: '253633418318976',
 				xfbml			: true,
-				version		: 'v2.6'
+				version			: 'v2.6'
 			});
 		};
 		(function(d, s, id){
