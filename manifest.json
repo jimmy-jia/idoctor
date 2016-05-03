@@ -3,7 +3,7 @@
 	"icons": [
 		{
 		"src": "resources/iDoctor.png",
-		"sizes": "48x48",
+		"sizes": "700x700",
 		"type": "image/png",
 		"density": "1.0"
 		}
